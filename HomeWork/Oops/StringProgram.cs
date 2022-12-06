@@ -329,27 +329,26 @@ namespace HomeWork.Oops
       
             static void Main(string[] args)
             {
-                string _inputstr, _reversestr = string.Empty;
+                string str, reversestr = string.Empty;
                 Console.Write("Enter a string : ");
-                _inputstr = Console.ReadLine();
-                if (_inputstr != null)
+                str = Console.ReadLine();
+                if (str != null)
                 {
-                    for (int i = _inputstr.Length - 1; i >= 0; i--)
+                    for (int i = str.Length - 1; i >= 0; i--)
                     {
-                        _reversestr += _inputstr[i].ToString();
+                        reversestr += str[i].ToString();
                     }
-                    if (_reversestr == _inputstr)
+                    if (reversestr == str)
                     {
-                        Console.WriteLine("String is Palindrome Input = {0} and Output= {1}", _inputstr, _reversestr);
+                        Console.WriteLine("String is Palindrome Input = {0} and Output= {1}", str, reversestr);
                     }
                     else
                     {
-                        Console.WriteLine("String is not Palindrome Input = {0} and Output= {1}", _inputstr, _reversestr);
+                        Console.WriteLine("String is not Palindrome Input = {0} and Output= {1}", str, reversestr);
                     }
                 }
-                Console.ReadLine();
             }
-        }
+    }
     
 }
 

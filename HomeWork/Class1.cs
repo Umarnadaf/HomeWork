@@ -59,4 +59,25 @@ namespace HomeWork
             Console.WriteLine(word);
         }
     }
+
+    class LongWord
+    {
+        static void Main(string[] args)
+        {
+            string str = "India is My Country";
+            Console.WriteLine(str);
+            string[] str1 = str.Split();
+            int count = 0;
+            string word = "";
+            foreach(string s in str1)
+            {
+                if (s.Length > count)
+                {
+                    word = s;
+                    count = s.Length;
+                }
+            }
+            Console.WriteLine(word);
+        }
+    }
 }
