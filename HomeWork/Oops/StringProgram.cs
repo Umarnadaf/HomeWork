@@ -326,31 +326,108 @@ namespace HomeWork.Oops
 
     class StringPallindrom
     {
-      
-            static void Main(string[] args)
+
+        static void Main(string[] args)
+        {
+            string str, reversestr = string.Empty;
+            Console.Write("Enter a string : ");
+            str = Console.ReadLine();
+            if (str != null)
             {
-                string str, reversestr = string.Empty;
-                Console.Write("Enter a string : ");
-                str = Console.ReadLine();
-                if (str != null)
+                for (int i = str.Length - 1; i >= 0; i--)
                 {
-                    for (int i = str.Length - 1; i >= 0; i--)
-                    {
-                        reversestr += str[i].ToString();
-                    }
-                    if (reversestr == str)
-                    {
-                        Console.WriteLine("String is Palindrome Input = {0} and Output= {1}", str, reversestr);
-                    }
-                    else
-                    {
-                        Console.WriteLine("String is not Palindrome Input = {0} and Output= {1}", str, reversestr);
-                    }
+                    reversestr += str[i].ToString();
+                }
+                if (reversestr == str)
+                {
+                    Console.WriteLine("String is Palindrome Input = {0} and Output= {1}", str, reversestr);
+                }
+                else
+                {
+                    Console.WriteLine("String is not Palindrome Input = {0} and Output= {1}", str, reversestr);
                 }
             }
+        }
     }
-    
+    class Department
+    {
+        string name;
+        int id;
+
+        public Department(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+        public void displayDepartment()
+        {
+            Console.WriteLine(id + " " + name);
+        }
+
+    }
+    class Employee
+    {
+        string name;
+        int salary;
+        Department dep;
+
+        public Employee(string name,int salary,Department dep)
+        {
+            this.name = name;
+            this.salary = salary;
+            this.dep = dep;
+
+        }
+        public void DisplayEmployee()
+        {
+            Console.WriteLine(name+" "+salary+" ");
+            dep.displayDepartment();
+        }
+        static void Main(string[] args)
+        {
+            Employee e = new Employee("umar", 50000, new Department(01, "IT"));
+            e.DisplayEmployee();
+        }
+    }
+
+    class Abbreviate
+    {
+        // name to abbrevation
+        public static string Abbr(string s)
+        {
+            string[] str = s.Split();
+            string abbrevation = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (i == 0 || i == 1)
+                {
+                    Char[] Word = str[i].ToCharArray();
+                    for (int j = 0; j < 1; j++)
+                    {
+                        if (j == 0)
+                        {
+                            abbrevation = abbrevation + Word[j] + ". ";
+                        }
+                    }
+                }
+                else
+                {
+                    abbrevation = abbrevation + str[i];
+                }
+            }
+            return abbrevation;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the string:");
+            string str = Console.ReadLine();
+            Console.WriteLine(" " + str);
+            Console.WriteLine("Abbrivated Name: " + Abbreviate.Abbr(str));
+        }
+    }
+
 }
+
 
 
 
