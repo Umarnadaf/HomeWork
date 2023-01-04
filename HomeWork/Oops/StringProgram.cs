@@ -119,7 +119,7 @@ namespace HomeWork.Oops
             for (int i = str.Length - 1; i > 0; i--)
                 strRev = strRev + str[i];
 
-            Console.WriteLine("String is reverse order is" + strRev);
+            Console.WriteLine("String is reverse order is " + strRev);
             Console.ReadKey();
         }
     }
@@ -237,7 +237,7 @@ namespace HomeWork.Oops
             foreach (char ch in str2)
                 str = str + ch;
 
-            Console.WriteLine("Concatinated string is" + str);
+            Console.WriteLine("Concatinated string is " + str);
             Console.ReadKey();
         }
     }

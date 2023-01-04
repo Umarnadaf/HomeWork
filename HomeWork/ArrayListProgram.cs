@@ -68,4 +68,67 @@ namespace HomeWork
             }
         }
     }
+
+    class DupArray
+    {
+        static void Main(string[] args)
+        {
+            ArrayList al = new ArrayList();
+             al.Add("Sun");
+            al.Add("Mon");
+            al.Add("Sat");
+            al.Add("Sun ");
+            al.Add("Mon ");
+            al.Add("Sat ");
+            al.Add("Sun ");
+            al.Add("Sat ");
+            al.Add("Sun ");
+            al.Add("Mon ");
+
+
+            for (int i = 0; i < al.Count; i++)
+            {
+                for(int j = i+1; j < al.Count; j++)
+                {
+                    if (al[i].Equals(al[j]))
+                    {
+                        al.RemoveAt(j);
+                        j--;
+                    }
+                }
+            }
+            foreach(string str in al)
+            {
+                Console.WriteLine(str+" ");
+            }
+        }
+    }
+
+    class SortArray
+    {
+        static void Main(string[] args)
+        {
+            ArrayList al = new ArrayList()
+            {
+                "India","Umar","Happy","New","Year"
+            };
+            for(int i = 0; i < al.Count; i++)
+            {
+                for(int j = i + 1; j < al.Count; j++)
+                {
+                    if (al[i].ToString().CompareTo(al[j].ToString()) < 1)
+                    {
+                        var temp = al[i];
+                        al[i] = al[j];
+                        al[j] = temp;
+                    }
+                }
+            }
+            foreach(var s in al)
+            {
+                Console.WriteLine(s+" ");
+            }
+        }
+    }
+
 }

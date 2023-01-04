@@ -69,7 +69,7 @@ namespace HomeWork
             int marks;
         }
 
-        public Students(int id, string name, int marks)//default constructor
+        public Students(int id, string name, int marks)//paramitarised constructor
         {
             this.id = id;
             this.name = name;

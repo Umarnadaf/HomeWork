@@ -204,6 +204,87 @@ namespace HomeWork
             }
         }
     }
+
+    class Palindrom
+    {
+        static void Main(string[] args)
+        {
+            int n = 23532;
+            int t = 0, sum = 0;
+            int temp = n;
+            while (n > 0)
+            {
+                t = n % 10;//23532--2
+                sum = (10 * sum) + t;
+                n = n / 10;//
+            }
+            if (temp == sum)
+            {
+                Console.WriteLine("Pallindrom");
+            }
+            else
+            {
+                Console.WriteLine("Not");
+            }
+        }
+    }
+
+    class Happy
+    {
+
+        static void Main(string[] args)
+        {
+            int n = 503;
+            int t,sum=0;
+            for(int i=0;i<=n;i++)
+            {
+                 t = n % 10;
+                n = n / 10;
+                sum = sum + t;
+            }
+            
+            if (sum % 2 != 0)
+            {
+                Console.WriteLine("yes");
+            }
+            else
+            {
+                Console.WriteLine("no");
+            }
+
+        }
+           
+    }
+    class Sumofprime
+    {
+        static void Main(string[] args)
+        {
+            int sum = 0;
+            int[] arr = new int [5];
+            for(int i = 0; i < 5; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+            for(int i = 0; i < 5; i++)
+            {
+                int Count = 0;
+                for(int j = 2; j <= arr[i] / 2; j++)
+                {
+                    if (arr[i] % j == 0)
+                    {
+                        Count = 1;
+                        break;
+                    }
+                }
+                if (Count == 0)
+                {
+                     sum = sum + arr[i];
+                  
+                }
+            }
+            Console.WriteLine(sum);
+        }
+    }
 }
 
 
