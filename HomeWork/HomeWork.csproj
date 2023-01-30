@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>HomeWork.Oops.StringCombine</StartupObject>
+    <StartupObject>HomeWork.strPalindrom</StartupObject>
   </PropertyGroup>
 
 </Project>

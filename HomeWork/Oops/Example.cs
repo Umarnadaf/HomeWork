@@ -276,18 +276,22 @@ namespace HomeWork.Oops
         }
     }
 
-  /*  class NegReplace
+    class NegReplace
     {
         static void Main(string[] args)
         {
             int[] arr = { 12, 3, -19, 29, 5, -61, 44, 7, -9 };
-            for(int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] < 0)
                 {
-                    arr[i]
+                    arr[i] = 1;
                 }
             }
+            foreach(int var in arr)
+            {
+                Console.WriteLine(var);
+            }
         }
-    }*/
+    }
 }

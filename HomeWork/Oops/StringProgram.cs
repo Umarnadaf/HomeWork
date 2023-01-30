@@ -14,6 +14,7 @@ namespace HomeWork.Oops
                 get { return count[i]; }
                 set { count[i] = value; }
             }
+        }
             static void Main(string[] args)
             {
                 MyIndexer obj = new MyIndexer();
@@ -27,7 +28,7 @@ namespace HomeWork.Oops
                     Console.Write(obj[i] + " ");
                 Console.ReadKey();
             }
-        }
+        
 
     }
 
@@ -83,11 +84,7 @@ namespace HomeWork.Oops
             string str = "hello";
             Console.WriteLine("string length is = " + str);
             Console.WriteLine("String length is = " + str.Length);
-            for (int i = 0; i <= str.Length; i++)
-            {
-                Console.Write(str[i]);
-            }
-
+            
             Console.WriteLine("Enter Any character");
             char ch = char.Parse(Console.ReadLine());
             int count = 0;
@@ -116,7 +113,7 @@ namespace HomeWork.Oops
             Console.WriteLine("String is=" + str);
 
             string strRev = "";
-            for (int i = str.Length - 1; i > 0; i--)
+            for (int i = str.Length-1 ; i > 0; i--)
                 strRev = strRev + str[i];
 
             Console.WriteLine("String is reverse order is " + strRev);
@@ -326,7 +323,6 @@ namespace HomeWork.Oops
 
     class StringPallindrom
     {
-
         static void Main(string[] args)
         {
             string str, reversestr = string.Empty;

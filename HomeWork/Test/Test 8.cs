@@ -30,8 +30,6 @@ namespace HomeWork.Test
             {
                 Console.WriteLine("Not");
             }
-
-
         }
     }
 
